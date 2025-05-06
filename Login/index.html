@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style1.css">
+	<title>Faça seu login</title>
+
+</head>
+<body>
+	<div class="square">
+		<i style="--clr:#0004ff;"></i>
+		<i style="--clr:#7700ff;"></i>
+		<i style="--clr:#ad00d8;"></i>
+		<div class="login">
+			<h2>Login</h2>
+			<form onsubmit="event.preventDefault(); login();">
+			<div class="inputBx">
+				<input type="text" placeholder="Email" id="login-email">
+			</div>
+			<div class="inputBx">
+				<input type="password" placeholder="Senha" id="login-password">
+			</div>
+			<div class="button">
+				<button type="submit" id="send">Entrar</button>
+			</div>
+			</form>
+			<div class="links">
+				<a href="criar.html">Criar conta</a>
+			</div>
+			
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style2.css">
+	<title>Crie sua conta</title>
+</head>
+<body>
+	<div class="square">
+		<i style="--clr:#0004ff;"></i>
+		<i style="--clr:#7700ff;"></i>
+		<i style="--clr:#ad00d8;"></i>
+		<div class="login">
+			<h2>Login</h2>
+			<div class="inputBx">
+				<input type="text" placeholder="Nome de usuário" id="name" required>
+			</div>
+            <div class="inputBx">
+				<input type="email" placeholder="Seu email" id="email" required>
+				<input type="email" placeholder="Confirme seu email" id="confirm-email" required>
+			</div>
+			<div class="inputBx">
+				<input type="password" placeholder="Senha" id="password" required>
+
+				<input type="password" placeholder="Confirme sua senha" id="confirm-password" required>
+			<div id="criarconta" class="button">
+				<button id="criarconta1" onclick="addUser()">Criar a conta</button>
+			</div>
+			<span id="error"></span>
+			<div class="links">
+				<a href="index.html">Entrar agora</a>
+			</div>
+		</div>
+	</div>
+	<script src="./script.js"></script>
+</body>
+</html>
