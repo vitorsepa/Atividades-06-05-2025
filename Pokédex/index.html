@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cartao do pokemon -->
+    <div class="container">
+        <h1>Pokedex</h1>
+        
+        <!-- Img pkm -->
+        <img class="imagem-pokemon" src="http://via.placeholder.com/150" alt="Imagem do Pokemon">
+        
+        <!-- infos do pokemon -->
+        <div class="info-pokemon">
+            <p><strong>Nome </strong> <span id="nome">---</span></p>
+            <p><strong>Numero </strong> <span id="numero">---</span></p>
+            <p><strong>Tipo </strong> <span id="tipo">---</span></p>
+        </div>
+        
+        
+        <!-- inserir pkm -->
+        <div class="area-busca">
+            <input type="text" id="entrada" placeholder="digite o nome ou numero do pokemon">
+            <button id="botao-buscar">Buscar</button>
+        </div>
+    </div>              
+</body>
+</html>
