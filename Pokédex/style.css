@@ -1,70 +1,103 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; /* zera o espaço interno de todos os elementos */
+    margin: 0; /* zera o espaço externo de todos os elementos */
+    box-sizing: border-box; /* faz com que o tamanho de largura e altura dos elementos inclua o padding e borda */
+    font-family: 'Press Start 2p', cursive; /* define a fonte do site para a fonte 'Press Start 2p' */
 }
+
 body{
-    background: linear-gradient(to bottom, #fc7d7d, #ffc7c7);
-    font-family: 'Press Start 2p', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: antiquewhite;
-    color: #ffffff;
-    padding: 20px;
+    background: linear-gradient(to bottom, #ff4c4c, #fd9898); /* cria um fundo com um degradê de cores vermelhas */
+    display: flex; /* usa o modelo de layout flexbox, o que facilita a organização dos elementos */
+    flex-direction: column; /* organiza os elementos na vertical */
+    justify-content: center; /* centraliza os elementos na tela verticalmente */
+    align-items: center; /* centraliza os elementos na tela horizontalmente */
+    height: 100vh; /* faz o body ocupar toda a altura da tela */
+    background-color: antiquewhite; /* define a cor de fundo como antiquewhite (bege claro) */
+    color: #ffffff; /* define a cor do texto como branca */
+    padding: 20px; /* coloca um espaço de 20px nas bordas do body */
 }
+
 .container{
-    background-color: rgb(209, 8, 8);
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-    padding: 30px;
-    width: 350px;
-    text-align: center;
-    position: relative;
-    font-size: 16px;
-    overflow: hidden;
+    background-color: rgb(209, 8, 8); /* define a cor de fundo do container como um vermelho escuro */
+    border-radius: 12px; /* arredonda os cantos do container */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* adiciona uma sombra suave ao redor do container */
+    padding: 30px; /* coloca um espaço interno de 30px dentro do container */
+    width: 350px; /* define a largura do container */
+    text-align: center; /* centraliza o texto dentro do container */
+    position: relative; /* permite que o posicionamento de elementos dentro do container seja relativo */
+    font-size: 16px; /* define o tamanho da fonte para 16px */
+    overflow: hidden; /* impede que o conteúdo ultrapasse os limites do container */
 }
 
 .container h1{
-    margin-bottom: 16px;
-    font-size: 28px;
+    margin-bottom: 16px; /* coloca um espaço abaixo do título */
+    font-size: 28px; /* define o tamanho da fonte do título como 28px */
 }
 
 .imagem-pokemon{
-    width: 150px;
-    height: 150px;
-    margin-bottom: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    object-fit: contain;
+    width: 150px; /* define a largura da imagem como 150px */
+    height: 150px; /* define a altura da imagem como 150px */
+    margin-bottom: 15px; /* coloca um espaço abaixo da imagem */
+    border-radius: 50%; /* deixa a imagem com formato circular */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* adiciona uma sombra suave à imagem */
+    object-fit: contain; /* faz a imagem se ajustar ao tamanho do elemento sem cortar */
 }
 
 .info-pokemon{
-    font-size: 18px;
-    color:aliceblue
+    font-size: 18px; /* define o tamanho da fonte das informações do Pokémon como 18px */
+    color: aliceblue; /* define a cor do texto como aliceblue (um tom de azul claro) */
 }
+
 .info-pokemon p{
-    margin: 7px;
+    margin: 7px; /* coloca um espaço de 7px entre os parágrafos */
 }
+
 .fita-tipo{
-    display: inline-block;
-    background-color: white;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 14px;
-    margin-top: 8px;
+    display: inline-block; /* coloca os chips de tipo um ao lado do outro */
+    background-color: white; /* define a cor de fundo dos chips como branco */
+    color: white; /* define a cor do texto dentro dos chips como branco */
+    padding: 5px 12px; /* coloca um espaço interno de 5px na parte superior e inferior e 12px nas laterais */
+    border-radius: 14px; /* arredonda as bordas dos chips */
+    margin-top: 8px; /* coloca um espaço acima do chip */
 }
+
 .area-busca{
-    margin-top: 20px;
+    margin-top: 20px; /* coloca um espaço de 20px acima da área de busca */
 }
 
 .area-busca input{
-    padding: 8px;
-    border: 0;
-    border-radius: 8px;
-    width: 85%;
-    margin-bottom: 10px;
-    font-size: 14px;
+    padding: 10px; /* coloca um espaço interno de 10px dentro do campo de input */
+    border: 0; /* remove a borda do campo de input */
+    border-radius: 8px; /* arredonda as bordas do campo de input */
+    width: 85%; /* define a largura do campo de input como 85% da largura total */
+    margin-bottom: 10px; /* coloca um espaço de 10px abaixo do campo de input */
+    font-size: 15px; /* define o tamanho da fonte dentro do campo de input como 15px */
+}
+
+.area-busca button{
+    width: 85%; /* define a largura do botão como 85% da largura total */
+    margin-top: 10px; /* coloca um espaço de 10px acima do botão */
+    padding: 10px; /* coloca um espaço interno de 10px dentro do botão */
+    border-radius: 8px; /* arredonda as bordas do botão */
+    border: 0; /* remove a borda do botão */
+    font-size: 15px; /* define o tamanho da fonte do botão como 15px */
+    color: white; /* define a cor do texto no botão como branca */
+    background-color: rgb(255, 57, 57); /* define a cor de fundo do botão como vermelho */
+    cursor: pointer; /* muda o cursor para uma mãozinha quando o usuário passa por cima do botão */
+    transition: 0.3s, ease, transform 0.3s ease; /* adiciona um efeito de transição suave quando o botão for pressionado */
+}
+
+.area-busca button:hover{
+    background-color: #ff4c4c; /* muda a cor do fundo do botão quando o cursor passa por cima */
+    color: rgb(255, 221, 221); /* muda a cor do texto quando o cursor passa por cima */
+    transform: scale(1.03); /* faz o botão aumentar de tamanho levemente quando o cursor passa por cima */
+}
+
+.chip-tipo{
+    display: inline-block; /* coloca os chips de tipo um ao lado do outro */
+    margin: 5px; /* coloca um espaço de 5px entre os chips */
+    background-color: white; /* define a cor de fundo do chip como branco */
+    padding: 5px 10px; /* coloca um espaço interno de 5px na parte superior e inferior e 10px nas laterais */
+    border-radius: 12px; /* arredonda as bordas do chip */
+    font-size: 15px; /* define o tamanho da fonte do texto no chip como 15px */
 }
