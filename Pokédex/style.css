@@ -101,3 +101,130 @@ body{
     border-radius: 12px; /* arredonda as bordas do chip */
     font-size: 15px; /* define o tamanho da fonte do texto no chip como 15px */
 }
+
+/* Continuar com o mesmo CSS fornecido anteriormente */
+.info-pokemon p {
+    margin: 7px;
+}
+
+.chip-tipo {
+    display: inline-block;
+    margin: 5px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+/* Estilos globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: antiquewhite;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgb(209, 8, 8);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.container h1 {
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+
+.imagem-pokemon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.info-pokemon {
+    font-size: 18px;
+    color: aliceblue;
+}
+
+.info-pokemon p {
+    margin: 7px;
+}
+
+.area-busca {
+    margin-top: 20px;
+}
+
+.area-busca input {
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
+    width: 85%;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.area-busca button {
+    width: 85%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(255, 57, 57);
+    cursor: pointer;
+    transition: 0.3s, ease, transform 0.3s ease;
+}
+
+.area-busca button:hover {
+    background-color: #ff4c4c;
+    color: rgb(255, 221, 221);
+    transform: scale(1.03);
+}
+
+/* Chips de tipo */
+.chip-tipo {
+    display: inline-block;
+    margin: 5px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+/* Tema Claro */
+.modo-claro {
+    background-color: white;
+    color: black;
+}
+
+/* Tema Escuro */
+.modo-escuro {
+    background-color: #121212;
+    color: white;
+}
+
+.area-tema {
+    margin-top: 20px;
+}
+

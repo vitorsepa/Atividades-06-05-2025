@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,95 +7,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {  /* espera a página carregar antes de rodar o código JavaScript */
-            const botaoBuscar = document.getElementById('botao-buscar'); /* pega o botão de busca */
-            const campoEntrada = document.getElementById('entrada'); /* pega o campo de entrada de texto */
-    
-            if (!botaoBuscar || !campoEntrada) { /* verifica se o botão e o campo de entrada existem */
-                console.error('Elemento não achado!'); /* se não encontrarem, mostra um erro no console */
-                return;
-            }
-    
-            botaoBuscar.addEventListener('click', async () => { /* quando o botão de busca for clicado, executa a função */
-                const buscar = campoEntrada.value.toLowerCase().trim(); /* pega o valor do campo de entrada e coloca em minúsculas e remove espaços extras */
-                if (!buscar) { /* se o campo estiver vazio, exibe um alerta */
-                    return alert("Insira o nome ou numero do Pokemon");
-                }
-                try {
-                    const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${buscar}`); /* faz uma requisição à API do Pokémon para buscar o Pokémon */
-                    if (!resposta.ok) throw new Error("Pokemon não encontrado"); /* se a resposta não for boa, mostra um erro */
-    
-                    const dados = await resposta.json(); /* converte a resposta para JSON */
-    
-                    document.getElementById('nome').textContent = dados.name; /* atualiza o nome do Pokémon na página */
-                    document.getElementById('numero').textContent = `${dados.id}`; /* atualiza o número do Pokémon na página */
-                    document.getElementById('img').src = dados.sprites.front_default; /* atualiza a imagem do Pokémon na página */
-    
-                    const tipos = document.getElementById('tipo'); /* pega o elemento onde os tipos vão aparecer */
-                    tipos.innerHTML = ''; /* limpa qualquer tipo anterior exibido */
-    
-                    dados.types.forEach(tipoInfo => { /* para cada tipo do Pokémon */
-                        const tipo = tipoInfo.type.name; /* pega o nome do tipo */
-                        const chip = document.createElement('span'); /* cria um novo elemento span */
-                        chip.className = 'chip-tipo'; /* adiciona a classe 'chip-tipo' ao novo elemento */
-                        chip.textContent = tipo; /* coloca o nome do tipo dentro do chip */
-                        chip.style.backgroundColor = corDoTipo(tipo); /* define a cor do chip com base no tipo */
-                        tipos.appendChild(chip); /* adiciona o chip dentro do elemento de tipos */
-                    });
-                } catch (error) { /* se algo der errado, exibe um erro */
-                    alert(error.message);
-                }
-    
-                function corDoTipo(tipo) { /* função para retornar a cor do tipo */
-                    const cores = { /* define as cores para cada tipo de Pokémon */
-                        fire: '#f08030',
-                        water: '#6890f0',
-                        grass: '#78c850',
-                        electric: '#f8d030',
-                        ice: '#98d8d8',
-                        fighting: '#c03028',
-                        poison: '#a040a0',
-                        ground: '#e0c068',
-                        flying: '#a890f0',
-                        psychic: '#f85888',
-                        bug: '#a8b820',
-                        rock: '#b8a038',
-                        ghost: '#705898',
-                        dragon: '#7038f8',
-                        dark: '#705848',
-                        steel: '#b8b8d0',
-                        fairy: '#f0b6bc',
-                        normal: '#a8a878',
-                        shadow: '#000000',
-                        unknown: '#ffffff'
-                    };
-                    return cores[tipo] || '#000000'; /* retorna a cor correspondente ao tipo ou preto se não encontrar */
-                }
-            });
-        });
-    </script>
-    <!-- Cartao do pokemon -->
+<body class="modo-claro">
     <div class="container">
         <h1>Pokedex</h1>
-        
-        <!-- Img pkm -->
-        <img class="imagem-pokemon" src="http://via.placeholder.com/150" alt="Imagem do Pokemon">
-        
-        <!-- infos do pokemon -->
+
+        <!-- Imagem do Pokémon -->
+        <img class="imagem-pokemon" id="img" src="http://via.placeholder.com/150" alt="Imagem do Pokémon">
+
+        <!-- Informações do Pokémon -->
         <div class="info-pokemon">
-            <p><strong>Nome </strong> <span id="nome">---</span></p>
-            <p><strong>Numero </strong> <span id="numero">---</span></p>
-            <p><strong>Tipo </strong> <span id="tipo">---</span></p>
+            <p><strong>Nome:</strong> <span id="nome">---</span></p>
+            <p><strong>Número:</strong> <span id="numero">---</span></p>
+            <p><strong>Tipo:</strong> <span id="tipo">---</span></p>
+            <p><strong>Peso:</strong> <span id="peso">---</span></p>
+            <p><strong>Altura:</strong> <span id="altura">---</span></p>
+            <p><strong>Habilidades:</strong> <span id="habilidades">---</span></p>
+            <p><strong>Estatísticas:</strong> <span id="estatisticas">---</span></p>
         </div>
-        
-        
-        <!-- inserir pkm -->
+
+        <!-- Área de busca do Pokémon -->
         <div class="area-busca">
-            <input type="text" id="entrada" placeholder="digite o nome ou numero do pokemon">
+            <input type="text" id="entrada" placeholder="Digite o nome ou número do Pokémon">
             <button id="botao-buscar">Buscar</button>
         </div>
-    </div>              
+
+        <!-- Botões para alternar entre temas -->
+        <div class="area-tema">
+            <button id="modoClaro">Modo Claro</button>
+            <button id="modoEscuro">Modo Escuro</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
